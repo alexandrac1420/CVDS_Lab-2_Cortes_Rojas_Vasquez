@@ -36,12 +36,14 @@ El repositorio central de Maven es un repositorio listo para usar en red que pro
 ### Crear un proyecto con Maven
 Para crear el proyecto con arquetipos es necesario utilizar el comando *"mvn archetype:generate"* en conjunto con los detalles del proyecto tales como groupId, artifactId, version, etc.
 
-<img height="200" src="C:\Users\alexa\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\SIS\4. CUARTO SEMESTRE\CVDS\Lab 2\Imagenes\img_2.png" width="400"/>
+![img_2](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/7d230dd0-96ff-497a-b4ea-1b7c5e21b191)
+
 
 ### Ajustar algunas configuracines en el proyecto
 Para cambiar la versión del compilador de Java es necesario agregar la sección properties en el archivo pom.xml
 
-<img alt="img_3.png" height="250" src="C:\Users\alexa\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\SIS\4. CUARTO SEMESTRE\CVDS\Lab 2\Imagenes\img_3.png" width="500"/>
+![img_3](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/fb216b47-ccac-4034-a4fc-f00385208e1c)
+
 
 ### Compilar y ejecutar
 El objetivo del parámetro "package" en el comando mvn es empaquetar el proyecto Maven en un archivo JAR, WAR u otro formato de archivo según la configuración del proyecto. Este objetivo se utiliza para compilar el código fuente, ejecutar las pruebas y empaquetar el resultado en un archivo listo para ser distribuido o desplegado.
@@ -67,20 +69,24 @@ mvn exec:java  -Dexec.mainClass="edu.eci.cvds.patterns.archetype.App"
 ```
 Y se configuro el archivo pom.xml para que identifique la clase App como la clase principal
 
-<img alt="img_1.png" height="250" src="C:\Users\alexa\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\SIS\4. CUARTO SEMESTRE\CVDS\Lab 2\Imagenes\img_1.png" width="500"/>
+![img_1](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/0681e1e5-9e2c-4ec9-87b1-76deb05d6db2)
+
 
 Para verificar una correcta implementación se realizaron las siguientes pruebas:
 1. Ejecutar la clase sin ingresar parámetros
 
-   <img alt="img_2.png" height="200" src="C:\Users\alexa\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\SIS\4. CUARTO SEMESTRE\CVDS\Lab 2\Imagenes\img_5.png" width="200"/>
+![img_5](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/daf42f7b-7803-4ae1-b7a0-d2447707f69e)
+
    
 2. Ejecutar la clase con el parámetro "Samuel"
 
-<img alt="img.png" height="200" src="C:\Users\alexa\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\SIS\4. CUARTO SEMESTRE\CVDS\Lab 2\Imagenes\img.png" width="400"/>
+![img](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/4f95e246-8ac5-450c-85bd-a3bff8fbbee0)
+
 
 3. Ejecutar la clase con el parámetro "Samuel Rojas"
 
-<img alt="img.png" height="200" src="C:\Users\alexa\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\SIS\4. CUARTO SEMESTRE\CVDS\Lab 2\Imagenes\img_4.png" width="400"/>
+![img_4](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/5e52ca9d-97d3-4173-aae9-3f4b0aae1a91)
+
 
 ### Hacer el esqueleto de la aplicación
 Para crear la clase ShapeFactory se implemento un patrón fábrica simple, debido a que esta clase es la encargada de crear instancias de diferentes tipos basandose en un parametro de entrada (type), el cual determinará que tipo de figura regular debe crearse.
@@ -110,34 +116,39 @@ public class ShapeFactory {
 ```
 Por otra parte es necesario volver a modificar el archivo pom.xml para registrar que la clase principal va a ser ShapeMain.
 
-<img alt="img.png" height="250" src="C:\Users\alexa\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\SIS\4. CUARTO SEMESTRE\CVDS\Lab 2\Imagenes\img_10.png" width="500"/>
+![img_10](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/e6ae8fb4-f723-4dc3-a97d-3de9754866ab)
+
 
 Verificando su correcta implementación se realizaron varios casos:
 1. Ejecutar la clase ShapeMain sin parámetros
    El programa se ejecuta correctamente, sin embargo envia un mensaje diciendo que es necesario ingresar un parámetro.
 
-   <img height="250" src="C:\Users\alexa\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\SIS\4. CUARTO SEMESTRE\CVDS\Lab 2\Imagenes\img_6.png" width="500"/>
+![img_6](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/d82a6f9d-7639-493c-b6bf-a3c4c31ac516)
+
 
 2. Ejecutar la clase ShapeMain con el parámetro qwerty
    El programa se ejecuta correctamente, sin embargo envia un mensaje diciendo que el parámetro ingresado no es válido como una figura regular debido a que no hace parte de la lista de figuras planteadas.
 
-   <img height="250" src="C:\Users\alexa\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\SIS\4. CUARTO SEMESTRE\CVDS\Lab 2\Imagenes\img_7.png" width="500"/>
+![img_7](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/54cf3781-a525-42f7-990f-b071435216d6)
+
 
 3. Ejecutar la clase ShapeMain con el parámetro pentagon
    El programa se ejecuta correctamente, sin embargo envia un mensaje diciendo que el parámetro ingresado no es válido como una figura regular, esto se debe a que no se escribió el nombre con la primera letra en mayuscula.
 
-   <img height="250" src="C:\Users\alexa\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\SIS\4. CUARTO SEMESTRE\CVDS\Lab 2\Imagenes\img_8.png" width="500"/>
+![img_8](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/9faf657d-3a04-485b-9cba-a1bc43f47eb2)
+
 
 4. Ejecutar la clase ShapeMain con el parámetro Hexagon
    El programa se ejecuta correctamente y funciona de la manera adecuada.
 
-   <img height="250" src="C:\Users\alexa\OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO\SIS\4. CUARTO SEMESTRE\CVDS\Lab 2\Imagenes\img_9.png" width="500"/>
+![img_9](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/e52ee5fc-1bb3-43b4-9069-a9df40c6426c)
+
 
 ## Construido con
 * Java 21.0.1
 * Maven 3.9.6
   
 ## Autor 
-__Alexandra Cortes Tovar__
-__Samuel Rojas Yopasa_
-__Juan Sebastián Vásquez Vega__ 
+* __Alexandra Cortes Tovar__
+* __Samuel Rojas Yopasa__
+* __Juan Sebastián Vásquez Vega__ 
