@@ -26,7 +26,7 @@ Maven tiene los siguientes tres ciclos de vida estándar:
 * predeterminado (o construir)
 * site
 
-### ¿Para qué sirven los plugins
+### ¿Para qué sirven los plugins?
 Los plugins se utilizan para realizar tareas específicas en el proceso de construcción, como compilar, empaquetar, desplegar, entre otros y se pueden configurar en el archivo pom.xml del proyecto donde sus objetivos se pueden invocar por línea de comandos
 
 ### ¿Qué es y para qué sirve el repositorio central de maven?
@@ -121,24 +121,28 @@ Por otra parte es necesario volver a modificar el archivo pom.xml para registrar
 
 Verificando su correcta implementación se realizaron varios casos:
 1. Ejecutar la clase ShapeMain sin parámetros
+   
    El programa se ejecuta correctamente, sin embargo envia un mensaje diciendo que es necesario ingresar un parámetro.
 
 ![img_6](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/d82a6f9d-7639-493c-b6bf-a3c4c31ac516)
 
 
 2. Ejecutar la clase ShapeMain con el parámetro qwerty
+   
    El programa se ejecuta correctamente, sin embargo envia un mensaje diciendo que el parámetro ingresado no es válido como una figura regular debido a que no hace parte de la lista de figuras planteadas.
 
 ![img_7](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/54cf3781-a525-42f7-990f-b071435216d6)
 
 
 3. Ejecutar la clase ShapeMain con el parámetro pentagon
+   
    El programa se ejecuta correctamente, sin embargo envia un mensaje diciendo que el parámetro ingresado no es válido como una figura regular, esto se debe a que no se escribió el nombre con la primera letra en mayuscula.
 
 ![img_8](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/9faf657d-3a04-485b-9cba-a1bc43f47eb2)
 
 
 4. Ejecutar la clase ShapeMain con el parámetro Hexagon
+   
    El programa se ejecuta correctamente y funciona de la manera adecuada.
 
 ![img_9](https://github.com/alexandrac1420/CVDS_Lab-2_Cortes_Rojas_Vasquez/assets/138069735/e52ee5fc-1bb3-43b4-9069-a9df40c6426c)
@@ -148,7 +152,7 @@ Verificando su correcta implementación se realizaron varios casos:
 * Java 21.0.1
 * Maven 3.9.6
   
-## Autor 
+## Autores
 * __Alexandra Cortes Tovar__
 * __Samuel Rojas Yopasa__
 * __Juan Sebastián Vásquez Vega__ 
